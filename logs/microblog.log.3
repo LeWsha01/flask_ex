@@ -1,4 +1,83 @@
-2021-02-10 01:54:14,886 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-02-10 01:42:35,023 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 27, in index
+    posts = current_user.followed_posts.all()
+AttributeError: 'function' object has no attribute 'all'
+2021-02-10 01:42:36,099 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 27, in index
+    posts = current_user.followed_posts.all()
+AttributeError: 'function' object has no attribute 'all'
+2021-02-10 01:42:36,588 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 27, in index
+    posts = current_user.followed_posts.all()
+AttributeError: 'function' object has no attribute 'all'
+2021-02-10 01:43:03,575 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-10 01:52:07,967 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-10 01:52:11,779 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 142, in explore
+    return redirect(url_for(index), title='Explore', posts=posts)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/helpers.py", line 318, in url_for
+    if endpoint[:1] == ".":
+TypeError: 'function' object is not subscriptable
+2021-02-10 01:54:09,532 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-10 01:54:13,564 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -33,78 +112,3 @@ Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'form' is undefined
-2021-02-10 01:56:42,657 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 01:56:46,198 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 142, in explore
-    return render_template('index.html', title='Explore', posts=posts)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
-    return _render(
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2021-02-10 01:56:47,178 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 142, in explore
-    return render_template('index.html', title='Explore', posts=posts)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
-    return _render(
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2021-02-10 02:00:44,018 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 02:02:56,525 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 02:03:44,417 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 02:17:10,063 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]

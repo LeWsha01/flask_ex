@@ -1,4 +1,4 @@
-2021-02-10 02:17:26,924 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-02-13 08:06:57,237 ERROR: Exception on /user/vlad [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,26 +14,7 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 29, in index
-    page, app.config['POSTS_PER_PAGE'], False
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 81, in user
+    page, app.config['POSTS_PER_PAGE'], False)
 KeyError: 'POSTS_PER_PAGE'
-2021-02-10 02:17:28,865 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 29, in index
-    page, app.config['POSTS_PER_PAGE'], False
-KeyError: 'POSTS_PER_PAGE'
-2021-02-10 02:18:23,962 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-13 08:08:00,232 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
