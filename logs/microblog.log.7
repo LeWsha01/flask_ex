@@ -1,4 +1,4 @@
-2021-02-08 00:47:38,891 ERROR: Exception on /login [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-02-08 00:47:35,755 ERROR: Exception on /logi [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
     self.dialect.do_execute(
@@ -77,34 +77,3 @@ FROM "user"
 WHERE "user".id = %(param_1)s]
 [parameters: {'param_1': 1}]
 (Background on this error at: http://sqlalche.me/e/13/f405)
-2021-02-08 00:47:46,608 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/microblog-0.8/app/__init__.py:43]
-2021-02-08 00:47:57,278 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/microblog-0.8/app/__init__.py:43]
-2021-02-08 00:48:40,291 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/microblog-0.8/app/__init__.py:43]
-2021-02-08 00:49:00,087 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/microblog-0.8/app/__init__.py:43]
-2021-02-08 00:49:35,763 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/microblog-0.8/app/__init__.py:43]
-2021-02-08 01:07:02,053 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/project/blog/app/__init__.py:43]
-2021-02-10 01:24:14,954 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 01:38:15,378 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 01:41:24,922 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 01:41:34,206 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 27, in index
-    posts = current_user.followed_post().all()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_post'
-2021-02-10 01:42:32,857 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]

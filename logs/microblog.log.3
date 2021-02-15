@@ -1,4 +1,4 @@
-2021-02-10 01:42:35,023 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-02-10 02:17:26,924 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,10 +14,10 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 27, in index
-    posts = current_user.followed_posts.all()
-AttributeError: 'function' object has no attribute 'all'
-2021-02-10 01:42:36,099 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 29, in index
+    page, app.config['POSTS_PER_PAGE'], False
+KeyError: 'POSTS_PER_PAGE'
+2021-02-10 02:17:28,865 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -33,10 +33,12 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 27, in index
-    posts = current_user.followed_posts.all()
-AttributeError: 'function' object has no attribute 'all'
-2021-02-10 01:42:36,588 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 29, in index
+    page, app.config['POSTS_PER_PAGE'], False
+KeyError: 'POSTS_PER_PAGE'
+2021-02-10 02:18:23,962 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-13 08:01:16,790 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-13 08:01:26,564 ERROR: Exception on /user/vlad [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -52,12 +54,16 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 27, in index
-    posts = current_user.followed_posts.all()
-AttributeError: 'function' object has no attribute 'all'
-2021-02-10 01:43:03,575 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 01:52:07,967 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 01:52:11,779 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 80, in user
+    def user(username):
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1315, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 98, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1282, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: user
+2021-02-13 08:02:04,764 ERROR: Exception on /user/vlad [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -71,13 +77,21 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 142, in explore
-    return redirect(url_for(index), title='Explore', posts=posts)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/helpers.py", line 318, in url_for
-    if endpoint[:1] == ".":
-TypeError: 'function' object is not subscriptable
-2021-02-10 01:54:09,532 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 01:54:13,564 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 80, in user
+    def user(username):
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1315, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 98, in wrapper_func
+    return f(self, *args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1282, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: user
+2021-02-13 08:05:31,688 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-13 08:06:05,192 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-13 08:06:51,804 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-13 08:06:56,201 ERROR: Exception on /user/vlad [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -91,24 +105,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 142, in explore
-    return render_template('index.html', title='Explore', posts=posts)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
-    return _render(
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 81, in user
+    page, app.config['POSTS_PER_PAGE'], False)
+KeyError: 'POSTS_PER_PAGE'

@@ -1,4 +1,4 @@
-2021-02-10 01:54:14,886 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-02-13 08:06:57,237 ERROR: Exception on /user/vlad [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,29 +12,15 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 142, in explore
-    return render_template('index.html', title='Explore', posts=posts)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
-    return _render(
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2021-02-10 01:56:42,657 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 01:56:46,198 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 81, in user
+    page, app.config['POSTS_PER_PAGE'], False)
+KeyError: 'POSTS_PER_PAGE'
+2021-02-13 08:08:00,232 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+2021-02-16 00:37:35,010 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:48]
+2021-02-16 00:40:32,851 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:48]
+2021-02-16 00:40:46,840 ERROR: Exception on / [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -48,28 +34,30 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 142, in explore
-    return render_template('index.html', title='Explore', posts=posts)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
-    return _render(
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 33, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2021-02-10 01:56:47,178 ERROR: Exception on /explore [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 27, in template
+    {% endblock
+jinja2.exceptions.TemplateSyntaxError: unexpected end of template, expected 'end of statement block'.
+2021-02-16 00:40:50,011 ERROR: Exception on /index [GET] [in /home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -83,28 +71,26 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 142, in explore
-    return render_template('index.html', title='Explore', posts=posts)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
-    return _render(
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/purplerain/Documents/python/flask/blog/app/routes.py", line 33, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 6, in block "content"
-    {{ form.hidden_tag() }}
-  File "/home/purplerain/Documents/python/flask/test/venv/lib/python3.8/site-packages/jinja2/environment.py", line 471, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'form' is undefined
-2021-02-10 02:00:44,018 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 02:02:56,525 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 02:03:44,417 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
-2021-02-10 02:17:10,063 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:43]
+  File "/home/purplerain/Documents/python/flask/blog/app/templates/index.html", line 27, in template
+    {% endblock
+jinja2.exceptions.TemplateSyntaxError: unexpected end of template, expected 'end of statement block'.
