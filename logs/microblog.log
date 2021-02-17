@@ -40,3 +40,6 @@ jinja2.exceptions.TemplateSyntaxError: unexpected end of template, expected 'end
 2021-02-16 00:51:30,357 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:48]
 2021-02-16 00:54:18,632 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:48]
 2021-02-16 00:55:34,937 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:48]
+2021-02-16 16:04:04,722 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:48]
+2021-02-16 16:15:07,185 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:50]
+2021-02-17 14:50:11,037 INFO: Microblog startup [in /home/purplerain/Documents/python/flask/blog/app/__init__.py:50]
