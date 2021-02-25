@@ -9,6 +9,8 @@ from config import Config
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from flask import request
+from flask_babel import Babel
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -19,6 +21,7 @@ mail = Mail(app)
 login.login_view = 'login'
 bootstrap = Bootstrap(app)
 moment = Moment(app)
+babel = Babel(app)
 
 
 if not app.debug:
@@ -49,4 +52,12 @@ if not app.debug:
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
 
+@babel.localeselector
+def get_locate():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+
+
+
 from app import routes, models, errors
+
+
